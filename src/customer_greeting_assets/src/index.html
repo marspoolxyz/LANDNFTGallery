@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>customer_greeting</title>
+    <base href="/">
+    <link type="text/css" rel="stylesheet" href="main.css" />
+
+    <style>
+ 
+        /* The grid: Four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Style the images inside the grid */
+        .column img {
+            opacity: 0.8;
+            cursor: pointer;
+            width:100%;
+        }
+        
+        .column img:hover {
+            opacity: 1;
+        }
+        
+        .row {
+         width:70%;
+         margin-left: auto;
+         margin-right: auto;   
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /* The expanding image container (positioning is needed to position the close button and the text) */
+        .container {
+            position: relative;
+            display: none;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto
+        }
+        
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 230px;
+            color: white;
+            font-size: 20px;
+            background-color:black;
+        }
+        
+        /* Closable button inside the image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }         
+    </style>
+    <script language="javascript">
+        function myFunction(imgs) {
+        // Get the expanded image
+        var expandImg = document.getElementById("expandedImg");
+        // Get the image text
+        var imgText = document.getElementById("imgtext");
+        // Use the same src in the expanded image as the image being clicked on from the grid
+        expandImg.src = imgs.src;
+        // Use the value of the alt attribute of the clickable image as text inside the expanded image
+        imgText.innerHTML = imgs.alt;
+        // Show the container element (hidden with CSS)
+        expandImg.parentElement.style.display = "block";
+        }         
+    </script>
+</head>
+<body>
+    <img src="logo.png" alt="DFINITY logo" />
+    <section>
+        <label for="name">Enter your name: &nbsp;</label>
+        <input id="name" alt="Name" type="text" />
+        <button id="clickMeBtn">Click Me!</button>
+    </section>
+    <section id="greeting"></section>
+
+  <!-- The expanding image container -->
+  <div class="container">
+    <!-- Close the image -->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  
+    <!-- Expanded image -->
+    <img id="expandedImg">
+  
+    <!-- Image text -->
+    <div id="imgtext"></div>
+  </div>     
+     <!-- The grid: four columns -->
+    <div class="row">
+        <div class="column">
+        <img src="https://ipfs.io/ipfs/QmRJFoSz9WdX6cGcrcH93krbktm45x43gXfzpFtddTSAh7" alt="Nature" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+        <img src="https://ipfs.io/ipfs/QmcGW92x8oqUNWonQqL8yJ4XGNQ4ZvSEs1m7xiakSxbrxT" alt="Snow" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+        <img src="https://ipfs.io/ipfs/QmUY27ANdANp26jXz1rX2D3n4FgVFzG8oapxUmUYDDDWqn" alt="Mountains" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+        <img src="https://ipfs.io/ipfs/QmeKqzqSiXBDdRrbkCQuyqBcbahQbnRkn9FbdTzyVtywhT" alt="Lights" onclick="myFunction(this);">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="https://ipfs.io/ipfs/QmRSiwWgbQWQ7HkzuSvcesvSd1zYRdyFCS2TiM72vNviPu" alt="Snow" onclick="myFunction(this);">
+            </div>
+        <div class="column">
+            <img src="https://ipfs.io/ipfs/QmTPKNx46FYYbT8btP8GQW4Gi77HwYwzNFaa8S2iTn2pdc" alt="Mountains" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="https://ipfs.io/ipfs/QmYLfwETw8U1CMUpVaChkz9PXG8Hj7nwkYra8EwF5mNn7n" alt="Lights" onclick="myFunction(this);">
+        </div>    
+        <div class="column">
+            <img src="https://ipfs.io/ipfs/QmX5mP6cuqzqxSMyfwmBYi4PEUrcFZ546utgZ4z3vqMDSH" alt="Lights" onclick="myFunction(this);">
+        </div>        
+    </div>  
+    <div class="row">
+        <div class="column">
+            <img src="https://ipfs.io/ipfs/QmZ6rCaBya2Aw79Tsd6LJJMsGtvuRNk14SiqwyueFbopB2" alt="Snow" onclick="myFunction(this);">
+            </div>
+        <div class="column">
+            <img src="https://ipfs.io/ipfs/QmUdw7WETX4N51WKZx2us8voVUhVzPnWra1yehAB2L3tft" alt="Mountains" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="https://ipfs.io/ipfs/QmcYPVr6NQ36Ynb6pRbc6Z5ezCBAmaWgfEKouf2rtxgu65" alt="Lights" onclick="myFunction(this);">
+        </div>    
+        <div class="column">
+            <img src="https://ipfs.io/ipfs/QmWW47bw6ZzpqLSon4R592zKEFGtY5S3zoH8nNThWCzVgH" alt="Lights" onclick="myFunction(this);">
+        </div>        
+    </div>  
+</body>
+</html>
