@@ -1,19 +1,19 @@
 {
   "canisters": {
-    "customer_greeting": {
-      "main": "src/customer_greeting/main.mo",
+    "marspoolxyz": {
+      "main": "src/marspoolxyz/main.mo",
       "type": "motoko"
     },
-    "customer_greeting_assets": {
+    "marspoolxyz_assets": {
       "dependencies": [
-        "customer_greeting"
+        "marspoolxyz"
       ],
       "frontend": {
-        "entrypoint": "src/customer_greeting_assets/src/index.html"
+        "entrypoint": "src/marspoolxyz_assets/src/index.html"
       },
       "source": [
-        "src/customer_greeting_assets/assets",
-        "dist/customer_greeting_assets/"
+        "src/marspoolxyz_assets/assets",
+        "dist/marspoolxyz_assets/"
       ],
       "type": "assets"
     }

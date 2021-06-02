@@ -26,10 +26,10 @@ http://127.0.0.1:8000/?canisterId=ryjl3-tyaaa-aaaaa-aaaba-cai
 dfx canister install --all --mode reinstall
 
 How to add data
-dfx canister call customer_greeting addMarsLand '( record {tokenid="San Francisco";name="Paris";imageurl="Rome";})'
+dfx canister call marspoolxyz addMarsLand '( record {tokenid="San Francisco";name="Paris";imageurl="Rome";})'
 
 How to fetch data
-dfx canister call customer_greeting findTokenById '(1)'
+dfx canister call marspoolxyz findTokenById '(1)'
 
 
 
@@ -45,7 +45,7 @@ dfx canister call customer_greeting findTokenById '(1)'
 If you want to start working on your project right away, you might want to try the following commands:
 
 ```bash
-cd customer_greeting/
+cd marspoolxyz/
 dfx help
 dfx config --help
 ```
